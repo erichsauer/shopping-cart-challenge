@@ -74,7 +74,7 @@ function getCategory(item) {
   }
 }
 
-// count the cheeses
+// count the category -- made it more generic for reusability
 function countTheCategory(category) {
   // get all items
   const groceries = getAllGroceries();
@@ -90,7 +90,6 @@ function countTheCategory(category) {
 }
 
 console.log("total cheeses: ", countTheCategory("cheeses"));
-// made it more generic for reusability
 console.log("total meats: ", countTheCategory("meats"));
 console.log("total vegetables: ", countTheCategory("vegetables"));
 console.log("total fruits: ", countTheCategory("fruits"));
@@ -114,7 +113,7 @@ console.log("total cost: ", addItAllUp());
 function calculateCategoryTotals() {
   const groceries = getAllGroceries();
   // create state object for easy access to each key
-  let categories = {
+  const categories = {
     fruits: 0,
     meats: 0,
     vegetables: 0,
